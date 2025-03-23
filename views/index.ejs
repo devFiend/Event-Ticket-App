@@ -12,12 +12,17 @@
 
     <ul>
         <% events.forEach(event => { %>
-            <li>
-                <strong><%= event.title %></strong> - <%= event.date %> - $<%= event.price %>  
-                <a href="/tickets/buy-ticket/<%= event._id %>" class="btn btn-primary">Buy Ticket</a>
+            <li class="event-card">
+                <img src="<%= event.imageUrl %>" alt="<%= event.title %>" class="event-thumbnail">
+                <div class="event-info">
+                    <strong><%= event.title %></strong>
+                    <p>📅 <%= event.date %> | 💲 <%= event.price %></p>
+                    <a href="/tickets/buy-ticket/<%= event._id %>" class="btn btn-primary">Buy Ticket</a>
+                </div>
             </li>
         <% }); %>
     </ul>
+    
 
     <div class="pagination">
         <% if (page > 1) { %>

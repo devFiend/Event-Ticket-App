@@ -7,19 +7,24 @@
     <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-    <h1>Buy Ticket for <%= event.title %></h1>
-    <p><strong>Date:</strong> <%= event.date %></p>
-    <p><strong>Price:</strong> $<%= event.price %></p>
-    <p><%= event.description %></p>
+    <%- include ('partials/header') %>
+    <div class="container">
+        <h1>🎟️ <%= event.title %></h1>
+        <img src="<%= event.imageUrl %>" alt="<%= event.title %>" class="event-image">
 
-    <form action="/mock-payment/<%= event._id %>" method="POST">
-        <input type="text" name="buyerName" placeholder="Your Name" required>
-        <input type="email" name="buyerEmail" placeholder="Your Email" required>
-        <button type="submit">Proceed to Payment</button>
-    </form>
-    
-    
+        <div class="event-details">
+            <p><strong>📅 Date:</strong> <%= event.date %></p>
+            <p><strong>💲 Price:</strong> $<%= event.price %></p>
+            <p class="description"><%= event.description %></p>
+        </div>
 
-    <a href="/">Back to Events</a>
+        <form action="/mock-payment/<%= event._id %>" method="POST" class="ticket-form">
+            <input type="text" name="buyerName" placeholder="👤 Your Name" required>
+            <input type="email" name="buyerEmail" placeholder="📧 Your Email" required>
+            <button type="submit" class="btn-primary">Proceed to Payment</button>
+        </form>
+
+        <a href="/" class="back-link">⬅ Back to Events</a>
+    </div>
 </body>
 </html>

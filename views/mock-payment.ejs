@@ -1,8 +1,25 @@
-<h2>Mock Payment for <%= event.title %></h2>
-<p>Amount: $<%= event.price %></p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mock Payment</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <%- include ('partials/header') %>
+    <div class="container">
+        <h2>💳 Mock Payment</h2>
+        <p class="event-title"><%= event.title %></p>
+        <p class="amount">💲 Amount: <strong>$<%= event.price %></strong></p>
 
-<form action="/confirm-payment/<%= event._id %>" method="POST">
-    <input type="hidden" name="buyerName" value="<%= buyerName %>">
-    <input type="hidden" name="buyerEmail" value="<%= buyerEmail %>">
-    <button type="submit">Confirm Payment</button>
-</form>
+        <form action="/confirm-payment/<%= event._id %>" method="POST" class="payment-form">
+            <input type="hidden" name="buyerName" value="<%= buyerName %>">
+            <input type="hidden" name="buyerEmail" value="<%= buyerEmail %>">
+            <button type="submit" class="btn-pay">Confirm Payment ✅</button>
+        </form>
+
+        <a href="/" class="back-link">⬅ Cancel Payment</a>
+    </div>
+</body>
+</html>
