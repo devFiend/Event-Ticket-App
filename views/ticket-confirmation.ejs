@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket Confirmation</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <h2>Ticket Confirmation</h2>
+    <p>Event: <%= event.title %></p>
+    <p>Buyer: <%= ticket.buyerName %></p>
+    <p>Email: <%= ticket.buyerEmail %></p>
+    <p>Ticket Code: <%= ticket.ticketCode %></p>
+    <img src="<%= qrCode %>" alt="QR Code for Ticket">
+    <p>Show this ticket at the event!</p>
+
+
+    <a href="/">Back to Home</a>
+</body>
+</html>

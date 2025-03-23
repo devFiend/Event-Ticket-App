@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Tickets</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; padding: 20px; }
+        table { width: 80%; margin: 20px auto; border-collapse: collapse; }
+        th, td { border: 1px solid #ddd; padding: 10px; text-align: left; }
+        th { background-color: #4CAF50; color: white; }
+        input { padding: 8px; margin-bottom: 10px; width: 50%; }
+    </style>
+</head>
+<body>
+    <h2>Welcome, <%= email %>! 🎟️</h2>
+    
+    <input type="text" id="search" placeholder="Search tickets...">
+
+    <table>
+        <tr>
+            <th>Event</th>
+            <th>Date</th>
+            <th>Ticket Code</th>
+            <th>Actions</th>
+        </tr>
+        <% tickets.forEach(ticket => { %>
+            <tr>
+                <td><%= ticket.eventId.title %></td>
+                <td><%= ticket.eventId.date %></td>
+                <td><%= ticket.ticketCode %></td>
+                <td>
+                    <a href="/dashboard/download-ticket/<%= ticket._id %>">Download</a>
+                </td>
+            </tr>
+        <% }) %>
+    </table>
+
+    <script>
+        document.getElementById("search").addEventListener("input", function() {
+            let search = this.value.toLowerCase();
+            document.querySelectorAll("table tr").forEach(row => {
+                let text = row.innerText.toLowerCase();
+                row.style.display = text.includes(search) ? "" : "none";
+            });
+        });
+    </script>
+</body>
+</html>

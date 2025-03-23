@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy Ticket</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <h1>Buy Ticket for <%= event.title %></h1>
+    <p><strong>Date:</strong> <%= event.date %></p>
+    <p><strong>Price:</strong> $<%= event.price %></p>
+    <p><%= event.description %></p>
+
+    <form action="/mock-payment/<%= event._id %>" method="POST">
+        <input type="text" name="buyerName" placeholder="Your Name" required>
+        <input type="email" name="buyerEmail" placeholder="Your Email" required>
+        <button type="submit">Proceed to Payment</button>
+    </form>
+    
+    
+
+    <a href="/">Back to Events</a>
+</body>
+</html>

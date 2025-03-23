@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <%- include ('partials/header') %>
+    <h1>Upcoming Events</h1>
+
+    <ul>
+        <% events.forEach(event => { %>
+            <li>
+                <strong><%= event.title %></strong> - <%= event.date %> - $<%= event.price %>  
+                <a href="/tickets/buy-ticket/<%= event._id %>" class="btn btn-primary">Buy Ticket</a>
+            </li>
+        <% }); %>
+    </ul>
+
+    <div class="pagination">
+        <% if (page > 1) { %>
+            <a href="/?page=<%= page - 1 %>" class="btn">Previous</a>
+        <% } %>
+    
+        <span>Page <%= page %> of <%= totalPages %></span>
+    
+        <% if (page < totalPages) { %>
+            <a href="/?page=<%= page + 1 %>" class="btn">Next</a>
+        <% } %>
+    </div>
+    
+
+    <a href="/admin">Admin Panel</a>
+</body>
+</html>

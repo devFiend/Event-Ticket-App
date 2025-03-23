@@ -1,0 +1,8 @@
+<h2>Mock Payment for <%= event.title %></h2>
+<p>Amount: $<%= event.price %></p>
+
+<form action="/confirm-payment/<%= event._id %>" method="POST">
+    <input type="hidden" name="buyerName" value="<%= buyerName %>">
+    <input type="hidden" name="buyerEmail" value="<%= buyerEmail %>">
+    <button type="submit">Confirm Payment</button>
+</form>
