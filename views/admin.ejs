@@ -7,24 +7,28 @@
     <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
+    <%- include ('partials/header') %>
     <div class="admin-container">
         <h2>🎟 Add New Event</h2>
         
-        <form action="/admin/add-event" method="POST">
+        <form action="/admin/add-event" method="POST" enctype="multipart/form-data">
             <label>📌 Title:</label>
             <input type="text" name="title" placeholder="Event Name" required>
-            
+        
             <label>📅 Date:</label>
             <input type="date" name="date" required>
-            
+        
             <label>💲 Price:</label>
             <input type="number" name="price" placeholder="Ticket Price" required>
-            
+        
             <label>📝 Description:</label>
             <textarea name="description" placeholder="Short event details..." required></textarea>
-            
+        
+            <label>📷 Event Image:</label>
+            <input type="file" name="image" accept="image/*" required>
+        
             <button type="submit" class="btn-add">➕ Add Event</button>
-        </form>
+        </form>        
 
         <a href="/" class="btn-back">⬅ Back to Home</a>
     </div>

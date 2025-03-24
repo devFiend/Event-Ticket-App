@@ -572,7 +572,7 @@ h2 {
 /* 🏠 Admin Container */
 .admin-container {
     max-width: 400px;
-    margin: auto;
+    margin: 100px auto auto auto;
     padding: 20px;
     background: white;
     border-radius: 15px;
