@@ -7,23 +7,28 @@
     <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-    <h2>Add New Event</h2>
-    <form action="/admin/add-event" method="POST">
-        <label>Title:</label>
-        <input type="text" name="title" required>
+    <div class="admin-container">
+        <h2>🎟 Add New Event</h2>
         
-        <label>Date:</label>
-        <input type="date" name="date" required>
-        
-        <label>Price:</label>
-        <input type="number" name="price" required>
-        
-        <label>Description:</label>
-        <textarea name="description" required></textarea>
-        
-        <button type="submit">Add Event</button>
-    </form>
+        <form action="/admin/add-event" method="POST">
+            <label>📌 Title:</label>
+            <input type="text" name="title" placeholder="Event Name" required>
+            
+            <label>📅 Date:</label>
+            <input type="date" name="date" required>
+            
+            <label>💲 Price:</label>
+            <input type="number" name="price" placeholder="Ticket Price" required>
+            
+            <label>📝 Description:</label>
+            <textarea name="description" placeholder="Short event details..." required></textarea>
+            
+            <button type="submit" class="btn-add">➕ Add Event</button>
+        </form>
 
-    <a href="/">Back to Home</a>
+        <a href="/" class="btn-back">⬅ Back to Home</a>
+    </div>
+
+    <%- include ('partials/footer') %>
 </body>
 </html>

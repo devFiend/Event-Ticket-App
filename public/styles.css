@@ -413,3 +413,249 @@ h2 {
 .back-link:hover {
     color: #c82333;
 }
+
+
+
+
+/* 🏠 Main Container */
+.container {
+    max-width: 400px;
+    margin: 100px auto auto auto;
+    padding: 20px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* 🎟 Title */
+h2 {
+    font-size: 22px;
+    color: #333;
+}
+
+/* 🎫 Event Name */
+.event-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #444;
+    margin-bottom: 10px;
+}
+
+/* 🆔 Ticket Info */
+.ticket-info p {
+    font-size: 16px;
+    color: #555;
+    margin: 5px 0;
+}
+
+/* 📷 QR Code */
+.qr-container {
+    margin: 15px 0;
+}
+
+.qr-container img {
+    width: 200px;
+    height: 200px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+}
+
+/* 📝 Note */
+.note {
+    font-size: 14px;
+    color: #777;
+    font-style: italic;
+    margin-top: 10px;
+}
+
+/* 🔙 Back Button */
+.btn-back {
+    display: block;
+    margin-top: 15px;
+    background: linear-gradient(45deg, #007bff, #0056b3);
+    color: white;
+    text-decoration: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.btn-back:hover {
+    background: linear-gradient(45deg, #0056b3, #007bff);
+}
+
+
+
+/* 🏠 Container */
+.container {
+    max-width: 400px;
+    margin: 100px auto auto auto;
+    padding: 20px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* 🔎 Search Bar */
+.search-bar {
+    width: 90%;
+    padding: 10px;
+    margin: 15px 0;
+    border: 2px solid #4CAF50;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+/* 🎟 Ticket List */
+.ticket-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* 🎫 Ticket Item */
+.ticket-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #f9f9f9;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+}
+
+/* 📜 Ticket Details */
+.ticket-details {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-size: 14px;
+}
+
+.event-title {
+    font-weight: bold;
+    color: #333;
+}
+
+.event-date {
+    color: #777;
+    font-size: 13px;
+}
+
+.ticket-code {
+    font-size: 12px;
+    color: #555;
+}
+
+/* ⬇ Download Button */
+.btn-download {
+    background: linear-gradient(45deg, #007bff, #0056b3);
+    color: white;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-download:hover {
+    background: linear-gradient(45deg, #0056b3, #007bff);
+}
+
+
+/* 🏠 Admin Container */
+.admin-container {
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* 🎟 Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+label {
+    font-weight: bold;
+    text-align: left;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border 0.3s;
+}
+
+input:focus, textarea:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+/* ➕ Add Button */
+.btn-add {
+    background: linear-gradient(45deg, #4CAF50, #2e7d32);
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-add:hover {
+    background: linear-gradient(45deg, #2e7d32, #4CAF50);
+}
+
+/* ⬅ Back Button */
+.btn-back {
+    display: inline-block;
+    margin-top: 15px;
+    text-decoration: none;
+    color: #007bff;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.btn-back:hover {
+    color: #0056b3;
+}
+
+
+/* 🦶 Footer Styling */
+footer {
+    background: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: 20px;
+}
+
+footer a {
+    color: #f8f8f8;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
