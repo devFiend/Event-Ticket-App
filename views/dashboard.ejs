@@ -18,11 +18,17 @@
             <% tickets.forEach(ticket => { %>
                 <div class="ticket-item">
                     <div class="ticket-details">
-                        <span class="event-title">🎭 <%= ticket.eventId.title %></span>
-                        <span class="event-date">📅 <%= new Date(ticket.eventId.date).toDateString().slice(4) %></span>
+                        <span class="event-title">🎭 <%= ticket.eventId?.title || "Event Not Found" %></span>
+                        <span class="event-date">📅 
+                            <%= ticket.eventId?.date ? new Date(ticket.eventId.date).toDateString().slice(4) : "N/A" %>
+                        </span>
                         <span class="ticket-code">🎫 <%= ticket.ticketCode %></span>
                     </div>
-                    <a href="/dashboard/download-ticket/<%= ticket._id %>" class="btn-download">⬇ Download</a>
+                    <% if (ticket.eventId) { %>
+                        <a href="/dashboard/download-ticket/<%= ticket._id %>" class="btn-download">⬇ Download</a>
+                    <% } else { %>
+                        <span class="btn-disabled">❌ Event Deleted</span>
+                    <% } %>
                 </div>
             <% }) %>
         </div>
@@ -38,6 +44,6 @@
         });
     </script>
 
-<%- include ('partials/footer') %>
+    <%- include ('partials/footer') %>
 </body>
 </html>
